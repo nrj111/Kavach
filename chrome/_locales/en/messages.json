@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Kavach EXP",
+    "message": "Kavach EXP🔰",
     "description": "The name of the extension."
   },
   "extDescription": {
@@ -20,7 +20,7 @@
     "description": "The message when the switch is turned off in the popup."
   },
   "buttonReloadPageForChange": {
-    "message": "Refresh page to apply changes",
+    "message": "Refresh page to apply changes♻️",
     "description": "Text for the button to reload the page after a changed activation state."
   },
   "buttonRedoPatternCheck": {

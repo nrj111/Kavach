@@ -388,7 +388,7 @@ export class FoundPatternsList extends LitElement {
             }
             return html`
                     <li title="${currentPatternInfo.info}">
-                        <a >${pattern.name}</a>: ${pattern.elementsVisible.length}
+                        <a>${pattern.name}</a>: ${pattern.elementsVisible.length}
                     </li>`;
         })}
             </ul>
@@ -603,9 +603,9 @@ export class ShowPatternButtons extends LitElement {
         return html`
         <div>
             <h2>${brw.i18n.getMessage("headingShowPattern")}</h2>
-            <span class="button" @click=${this.showPreviousPattern}>⏮️</span>
+            <span class="button" @click=${this.showPreviousPattern}>◀️Prev</span>
             <span>${brw.i18n.getMessage("showPatternState", [this.getCurrentPatternNumber(), this.results.countVisible.toString()])}</span>
-            <span class="button" @click=${this.showNextPattern}>⏭️</span>
+            <span class="button" @click=${this.showNextPattern}>Next▶️</span>
             ${this.getCurrentPatternText()}
         </div>
       `;
@@ -666,6 +666,7 @@ export class PopupFooter extends LitElement {
         css`
             div {
                 margin-top: 2em;
+                color : blue;
             }
         `
     ];
