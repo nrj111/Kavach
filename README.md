@@ -1,5 +1,5 @@
 # Kavach
-[Kavach](https://github.com/nrj111/Kavach/assets/116136410/8f5695b6-b8b4-4b08-8512-29681bed31bd)
+![](https://github.com/nrj111/Kavach/assets/116136410/8f5695b6-b8b4-4b08-8512-29681bed31bd)
 
 
 # Kavach Browser Extension
