@@ -1,4 +1,6 @@
-# 🔰
+# Kavach
+[Kavach](https://github.com/nrj111/Kavach/assets/116136410/8f5695b6-b8b4-4b08-8512-29681bed31bd)
+
 
 # Kavach Browser Extension
 This tool intended to help consumers to navigate the internet in a way similar to an ad blocker. However, the highlighter differs from ad blockers in one crucial aspect: it does not block individual dark patterns on websites but highlights them so that consumers become aware of the influences affecting them. In addition, the tool informs about the type of pattern.
