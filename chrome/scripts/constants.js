@@ -13,7 +13,6 @@ const brw = chrome;
  *  - `detectionFunctions`: An array of functions `f(node, nodeOld)` to detect the pattern.
  *      Parameters of the functions are the HTML node to be examined in current and previous state (in this order).
  *      The functions must return `true` if the pattern was detected and `false` if not.
- *  - `infoUrl`: The URL to the explanation of the pattern on the `dapde.de` website.
  *  - `info`: A brief explanation of the pattern.
  *  - `languages`: An array of ISO 639-1 codes of the languages supported by the detection functions..
  * @constant
@@ -23,7 +22,6 @@ const brw = chrome;
  *      className: string,
  *      detectionFunctions: Array.<Function>,
  *      info: string,
- *      
  *  }>
  * }}
  */
@@ -121,11 +119,7 @@ export const patternConfig = {
                     return false;
                 }
             ],
-            // infoUrl: brw.i18n.getMessage("patternCountdown_infoUrl"),
             info: brw.i18n.getMessage("patternCountdown_info"),
-            // languages: [
-            //     "en"
-            // ]
         },
         {
             /**
@@ -148,22 +142,8 @@ export const patternConfig = {
                     //          "99% claimed"
                     return /\d+\s*(?:\%|pieces?|pcs\.?|pc\.?|ct\.?|items?)?\s*(?:available|sold|claimed|redeemed)|(?:last|final)\s*(?:article|item)/i.test(node.innerText);
                 },
-                // function (node, nodeOld) {
-                //     // Return true if a match is found in the current text of the element,
-                //     // using a regular expression for the scarcity pattern with German words.
-                //     // The regular expression checks whether a number is followed by one of several keywords
-                //     // or alternatively if the word group 'last article' (`letzter\s*Artikel`) is present.
-                //     // The previous state of the element is not used.
-                //     // Example: "10 Stück verfügbar"
-                //     //          "99% eingelöst"
-                //     return /\d+\s*(?:\%|stücke?|stk\.?)?\s*(?:verfügbar|verkauft|eingelöst)|letzter\s*Artikel/i.test(node.innerText);
-                // }
             ],
-            // infoUrl: brw.i18n.getMessage("patternScarcity_infoUrl"),
             info: brw.i18n.getMessage("patternScarcity_info"),
-            // languages: [
-            //     "en"
-            // ]
         },
         {
             /**
@@ -185,21 +165,9 @@ export const patternConfig = {
                     //          "6 buyers have rated the following products [with 5 stars]"
                     return /\d+\s*(?:other)?\s*(?:customers?|clients?|buyers?|users?|shoppers?|purchasers?|people)\s*(?:have\s+)?\s*(?:(?:also\s*)?(?:bought|purchased|ordered)|(?:rated|reviewed))\s*(?:this|the\s*following)\s*(?:product|article|item)s?/i.test(node.innerText);
                 },
-                // function (node, nodeOld) {
-                //     // Return true if a match is found in the current text of the element,
-                //     // using a regular expression for the social proof pattern with German words.
-                //     // The regular expression checks whether a number is followed by a combination of different keywords.
-                //     // The previous state of the element is not used.
-                //     // Example: "5 andere Kunden kauften auch diesen Artikel"
-                //     //          "6 Käufer*innen haben folgende Produkte [mit 5 Sternen bewertet]"
-                //     return /\d+\s*(?:andere)?\s*(?:Kunden?|Käufer|Besteller|Nutzer|Leute|Person(?:en)?)(?:(?:\s*\/\s*)?[_\-\*]?innen)?\s*(?:(?:kauften|bestellten|haben)\s*(?:auch|ebenfalls)?|(?:bewerteten|rezensierten))\s*(?:diese[ns]?|(?:den|die|das)?\s*folgenden?)\s*(?:Produkte?|Artikel)/i.test(node.innerText);
-                // }
             ],
             // infoUrl: brw.i18n.getMessage("patternSocialProof_infoUrl"),
             info: brw.i18n.getMessage("patternSocialProof_info"),
-            // languages: [
-            //     "en"
-            // ]
         },
         {
             /**
@@ -239,41 +207,8 @@ export const patternConfig = {
                     // Return `false` if no regular expression matches.
                     return false;
                 },
-                // function (node, nodeOld) {
-                //     // Return true if a match is found in the current text of the element,
-                //     // using multiple regular expressions for the forced proof continuity with German words.
-                //     // The regular expressions check if one of three combinations of a price specification
-                //     // in Euro and the specification of a month is present.
-                //     // The previous state of the element is not used.
-                //     if (/\d+(?:,\d{2})?\s*(?:Euro|€)\s*(?:(?:pro|im|\/)\s*Monat)?\s*(?:ab\s*(?:dem)?\s*\d+\.\s*Monat|nach\s*\d+\s*(?:Monaten|Tagen)|nach\s*(?:einem|1)\s*Monat)/i.test(node.innerText)) {
-                //         // Example: "10,99 Euro pro Monat ab dem 12. Monat"
-                //         //          "11€ nach 30 Tagen"
-                //         return true;
-                //     }
-                //     if (/(?:anschließend|danach)\s*\d+(?:,\d{2})?\s*(?:Euro|€)\s*(?:pro|im|\/)\s*Monat/i.test(node.innerText)) {
-                //         // Example: "anschließend 23,99€ pro Monat"
-                //         //          "danach 10 Euro/Monat"
-                //         return true;
-                //     }
-                //     if (/\d+(?:,\d{2})?\s*(?:Euro|€)\s*(?:pro|im|\/)\s*Monat\s*(?:anschließend|danach)/i.test(node.innerText)) {
-                //         // Example: "23,99€ pro Monat anschließend"
-                //         //          "10 Euro/Monat danach"
-                //         return true;
-                //     }
-                //     if (/ab(?:\s*dem)?\s*\d+\.\s*Monat(?:\s*nur)?\s*\d+(?:,\d{2})?\s*(?:Euro|€)/i.test(node.innerText)) {
-                //         // Example: "ab dem 24. Monat nur 23,99 Euro"
-                //         //          "ab 6. Monat 9,99€"
-                //         return true;
-                //     }
-                //     // Return `false` if no regular expression matches.
-                //     return false;
-                // }
             ],
-            // infoUrl: brw.i18n.getMessage("patternForcedContinuity_infoUrl"),
             info: brw.i18n.getMessage("patternForcedContinuity_info"),
-            // languages: [
-            //     "en"
-            // ]
         }
     ]
 }
@@ -311,25 +246,6 @@ function validatePatternConfig() {
                 return false;
             }
         }
-        // Ensure that the info URL is a non-empty string.
-        // if (!pattern.infoUrl || typeof pattern.infoUrl !== "string") {
-        //     return false;
-        // }
-        // // Ensure that the info/explanation is a non-empty string.
-        // if (!pattern.info || typeof pattern.info !== "string") {
-        //     return false;
-        // }
-        // // Ensure that the languages are a non-empty array.
-        // if (!Array.isArray(pattern.languages) || pattern.languages.length <= 0) {
-        //     return false;
-        // }
-        // // Check every single language for being a non-empty string.
-        // for (let language of pattern.languages) {
-        //     // Ensure that the language is a non-empty string.
-        //     if (!language || typeof language !== "string") {
-        //         return false;
-        //     }
-        // }
     }
     // If all checks have been passed successfully, the configuration is valid and `true` is returned.
     return true;
