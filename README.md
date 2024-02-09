@@ -1,4 +1,5 @@
-![Logo Banner](images/banner.png)
+![Logo Banner](![icon-512](https://github.com/nrj111/Kavach/assets/116136410/e6a8d1f0-fcc1-4920-8f9d-18cd0d048454)
+images/banner.png)
 
 # Kavach Browser Extension
 This tool intended to help consumers to navigate the internet in a way similar to an ad blocker. However, the highlighter differs from ad blockers in one crucial aspect: it does not block individual dark patterns on websites but highlights them so that consumers become aware of the influences affecting them. In addition, the tool informs about the type of pattern.
@@ -26,10 +27,13 @@ Click on the image or [here](https://dapde.de/en/news-en/dapde-dark-pattern-high
 [![Teaser Video](images/video_thumbnail.png)](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/)
 
 ### Screenshots
-| ![Highlighting Example](images/example.png) | ![Pattern Highlighter Popup](images/popup.png) |
-                                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| *Example of a web site with two highlighted dark patterns. The black border highlights a countdown and a scarcity pattern element (from left to right). \*Some web site details were manually removed from the screenshot.* | *The popup window of the extension. The popup window can be used to disable and enable the highlighting. Additionally, information about the detected patterns is displayed and each one can be highlighted separately.* |
+![Highlighting Example](![Kavach Highlight](https://github.com/nrj111/Kavach/assets/116136410/c52b1abc-6e37-4685-8c81-9a614684b9ea)
+)
+*Example of a web site with two highlighted dark patterns. The black border highlights a countdown and a scarcity pattern element (from left to right). \*Some web site details were manually removed from the screenshot.* 
+
+![Pattern Highlighter Popup](![Popup](https://github.com/nrj111/Kavach/assets/116136410/c226aa9d-d2bd-42c1-9302-5466e06e172f)
+) 
+*The popup window of the extension. The popup window can be used to disable and enable the highlighting. Additionally, information about the detected patterns is displayed and each one can be highlighted separately.* 
 
 ## How it works
 The Kavach works entirely locally in the browser and does not connect to any servers. When visiting a web page, the extension injects a small script that creates an internal temporary copy of the entire web page i.e. its HTML DOM. After a short pause (about 1.5 seconds) a second copy is created. Subsequently, all elements of these copies are examined individually and in combination with child elements using the implemented pattern detection methods. The pattern detection methods decide whether an element is a specific dark pattern or not. The reason for creating two copies with a time gap is to detect changes on the web page. This makes it possible to detect certain patterns such as countdowns.
