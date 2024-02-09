@@ -66,10 +66,10 @@ Right now, all of the four detection functions are optimized for English website
 The Kavach uses an [API](https://developer.chrome.com/docs/extensions/reference/) that is specified by Google and primarily supported by the Google Chrome browser. However, many other browsers also support this Chrome API. Since Microsoft Edge and Opera, just like Google Chrome, are built on the [Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)) code base, the [API support](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) of the three browsers is almost completely identical. Consequently, the extension will behave the same way in these browsers. This is also to be expected for other browsers that are based on Chromium.
 
 ### Firefox
-Firefox also supports the Chrome API with [some differences and limitations](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities). For the Pattern Highlighter it is only relevant that Firefox [does not support](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) the `background.service_worker` key in the [manifest file](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) of extensions to define scripts that run in the background. Instead, it supports the `background.scripts` key, which is not supported by Chrome. Therefore, the Firefox version of the extension requires a custom manifest file. The other files are the same as in the Chrome version of the extension. The section on [installation in Firefox](#firefox) explains how to create the Firefox version.
+Firefox also supports the Chrome API with [some differences and limitations](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities). For the kavach it is only relevant that Firefox [does not support](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) the `background.service_worker` key in the [manifest file](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) of extensions to define scripts that run in the background. Instead, it supports the `background.scripts` key, which is not supported by Chrome. Therefore, the Firefox version of the extension requires a custom manifest file. The other files are the same as in the Chrome version of the extension. The section on [installation in Firefox](#firefox) explains how to create the Firefox version.
 
 ### Safari
-Safari also supports the Chrome API functions required by the Pattern Highlighter. Thus, the Pattern Highlighter is functionally fully compatible with Safari. However, Safari uses its own format for extensions, which differs from the other browsers. Therefore, the code of the Pattern Highlighter must first be converted to a Safari extension. This can conveniently be done automatically and is described in the section on [installation in Safari](#safari-1).
+Safari also supports the Chrome API functions required by the Kavcach. Thus, the Kavach is functionally fully compatible with Safari. However, Safari uses its own format for extensions, which differs from the other browsers. Therefore, the code of the Kavach must first be converted to a Safari extension. This can conveniently be done automatically and is described in the section on [installation in Safari](#safari-1).
 
 Visual differences from the versions of the other browsers:
 - *The number of detected patterns on the icon are always displayed with a red background, even if `0` patterns were detected.* Safari does [not support](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/setBadgeBackgroundColor) functions to change the background color of the text or these functions have [no effect](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/setBadgeBackgroundColor). By default, the text in Safari has a red background.
@@ -84,7 +84,7 @@ To install the extension, the repository or the `chrome` folder must be download
    - Or, click the Chrome menu, hover over **More Tools**, then select **Extensions**.
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the `chrome` directory.
-4. (Optional): Click the Extensions menu puzzle button in the address bar and then click the **Pin** button next to the *Pattern Highlighter* to keep its icon permanently displayed.
+4. (Optional): Click the Extensions menu puzzle button in the address bar and then click the **Pin** button next to the *Kavch* to keep its icon permanently displayed.
 
 ### Edge
 1. Go to the Extensions page by entering `edge://extensions` in a new tab.
@@ -94,7 +94,7 @@ To install the extension, the repository or the `chrome` folder must be download
 4. (Optional): Click the Extensions menu puzzle button in the address bar and then click the **Show in Toolbar** button (eye icon) next to the *Kavach* to keep its icon permanently displayed.
 
 ### Safari
-In order to install the extension in Safari, it must first be converted into the compatible format. This requires an Xcode installation. To convert the Pattern Highlighter to a Safari extension, follow these steps.
+In order to install the extension in Safari, it must first be converted into the compatible format. This requires an Xcode installation. To convert the Kavach to a Safari extension, follow these steps.
 
 1. Open a terminal window and navigate to the path of the repository (one directory level above the `chrome` folder).
 2. Execute the following command: `xcrun safari-web-extension-converter --macos-only --project-location safari chrome`. ([More information about the command.](https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari#3586260))
@@ -119,9 +119,9 @@ To build the firefox version, the complete repository must be downloaded.
 1. Go to the Firefox Debugging page by entering `about:debugging` in a new tab.
 2. Click the **This Firefox** button on the left side, then click the **Load Temporary Add-on...** button and select the `manifest.json` file in the `firefox` directory.
 3. Go to the Extensions page by entering `about:addons` in a new tab.
-4. Click the **Extensions** button on the left side and then click on the *Pattern Highlighter*.
-5. Open the **Permissions** tab and click the toggle switch to the right of `Access your data for all websites` to give the Pattern Highlighter permissions to scan for patterns on all websites.
-6. (Optional): Click the Extensions menu puzzle button in the address bar, right-click on the *Pattern Highlighter* and then click **Pin to Toolbar** to keep its icon permanently displayed.
+4. Click the **Extensions** button on the left side and then click on the *Kavach*.
+5. Open the **Permissions** tab and click the toggle switch to the right of `Access your data for all websites` to give the Kavach permissions to scan for patterns on all websites.
+6. (Optional): Click the Extensions menu puzzle button in the address bar, right-click on the *Kavach* and then click **Pin to Toolbar** to keep its icon permanently displayed.
 
 Since the extension can currently only be installed via the method for developers, in Firefox it only remains installed until the browser is restarted.
 
@@ -129,7 +129,7 @@ Since the extension can currently only be installed via the method for developer
 1. Go to the Extensions page by entering `opera://extensions` in a new tab (or use the <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> shortcut).
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the `chrome` directory.
-4. (Optional): Click the Extensions menu cube button in the address bar and then click the **Pin** button next to the *Pattern Highlighter* to keep its icon permanently displayed.
+4. (Optional): Click the Extensions menu cube button in the address bar and then click the **Pin** button next to the *Kavach* to keep its icon permanently displayed.
 
 ## Libraries Used
 - [Lit 2.7.2](https://lit.dev/) ([BSD-3-Clause](chrome/scripts/lit/LICENSE))
