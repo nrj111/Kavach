@@ -1,4 +1,4 @@
-(https://github.com/nrj111/Kavach/assets/116136410/e6a8d1f0-fcc1-4920-8f9d-18cd0d048454)
+[!(https://github.com/nrj111/Kavach/assets/116136410/e6a8d1f0-fcc1-4920-8f9d-18cd0d048454)]
 
 # Kavach Browser Extension
 This tool intended to help consumers to navigate the internet in a way similar to an ad blocker. However, the highlighter differs from ad blockers in one crucial aspect: it does not block individual dark patterns on websites but highlights them so that consumers become aware of the influences affecting them. In addition, the tool informs about the type of pattern.
@@ -25,16 +25,17 @@ This tool intended to help consumers to navigate the internet in a way similar t
 Click on the image or [here](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/) to watch the teaser video for the Kavach.
 [![Teaser Video](images/video_thumbnail.png)](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/)
 
-### Screenshots
-Highlighting Example 
+## Screenshots
 
-(![Kavach Highlight](https://github.com/nrj111/Kavach/assets/116136410/c52b1abc-6e37-4685-8c81-9a614684b9ea)
+### Highlighting Example 
+
+![Kavach Highlight](https://github.com/nrj111/Kavach/assets/116136410/c52b1abc-6e37-4685-8c81-9a614684b9ea)
 
 *Example of a web site with two highlighted dark patterns. The black border highlights a countdown and a scarcity pattern element (from left to right). \*Some web site details were manually removed from the screenshot.* 
 
-Extension Popup
+###Extension Popup
 
-(![Popup](https://github.com/nrj111/Kavach/assets/116136410/c226aa9d-d2bd-42c1-9302-5466e06e172f)
+![Popup](https://github.com/nrj111/Kavach/assets/116136410/c226aa9d-d2bd-42c1-9302-5466e06e172f)
 
 *The popup window of the extension. The popup window can be used to disable and enable the highlighting. Additionally, information about the detected patterns is displayed and each one can be highlighted separately.* 
 
