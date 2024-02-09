@@ -22,11 +22,12 @@ This tool intended to help consumers to navigate the internet in a way similar t
 
 ## Video and Screenshots
 ### Teaser Video
-Click on the image or [here](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/) to watch the teaser video for the Pattern Highlighter.
+Click on the image or [here](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/) to watch the teaser video for the Kavach.
 [![Teaser Video](images/video_thumbnail.png)](https://dapde.de/en/news-en/dapde-dark-pattern-highlighter-en/)
 
 ### Screenshots
-|                                                                                         ![Highlighting Example](images/example.png)                                                                                         |                                                                                      ![Pattern Highlighter Popup](images/popup.png)                                                                                      |
+|                                                                                         ![Highlighting Example](images/example.png)                                                                                         |                                                                                      ![Pattern Highlighter Popup][Screenshot 2024-02-09 222625](https://github.com/nrj111/Kavach/assets/116136410/67f65347-7f10-4281-8e6e-e4bac41411ed)
+                                                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | *Example of a web site with two highlighted dark patterns. The black border highlights a countdown and a scarcity pattern element (from left to right). \*Some web site details were manually removed from the screenshot.* | *The popup window of the extension. The popup window can be used to disable and enable the highlighting. Additionally, information about the detected patterns is displayed and each one can be highlighted separately.* |
 
