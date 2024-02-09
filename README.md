@@ -45,12 +45,13 @@ The Kavach works entirely locally in the browser and does not connect to any ser
 Mainly responsible for the results of the pattern detection are the mentioned detection functions. These are centrally defined in the `patternConfig` object together with information about the associated patterns in [`constants.js`](chrome/scripts/constants.js). This `patternConfig` object can be extended arbitrarily by additional patterns and functions, according to the requirements that are commented in [`constants.js`](chrome/scripts/constants.js).
 
 Currently, one detection function each is implemented for the four following patterns.
-- [Countdown](https://dapde.de/en/dark-patterns-en/types-and-examples-en/druck2-en/)
-- [Scarcity](https://dapde.de/en/dark-patterns-en/types-and-examples-en/druck2-en/)
-- [Social Proof](https://dapde.de/en/dark-patterns-en/types-and-examples-en/druck2-en/)
-- [Forced Continuity](https://dapde.de/en/dark-patterns-en/types-and-examples-en/operativer-zwang2-en/)
+- [Countdown](https://github.com/nrj111/Kavach/assets/116136410/7106d714-a9b1-4b2f-a941-ec5e3d008191)
+- [Scarcity](https://github.com/nrj111/Kavach/assets/116136410/bd5727d2-9f11-4f91-8d5e-3cc852defdd4)
+- [Social Proof](https://github.com/nrj111/Kavach/assets/116136410/c028a316-1a48-459c-947d-0c88e937798b)
+- [Forced Continuity](https://github.com/nrj111/Kavach/assets/116136410/7900054e-f2ef-4894-abd8-248609ee2d61)
 
-Right now, all of the four detection functions are optimized for German and English websites and cannot be applied to websites in other languages.
+
+Right now, all of the four detection functions are optimized for English websites and cannot be applied to websites in other languages.
 
 ## Browser Compatibility
 | Browser         	| Is compatible? 	| Tested versions                                                               	|
